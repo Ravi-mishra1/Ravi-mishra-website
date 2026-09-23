@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>पं. रवि कांत मिश्रा — भाजपा नेता | मथुरा-वृंदावन</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --saffron: #FF6B00;
+      --orange: #FF9933;
+      --navy: #0D1B3E;
+      --navy-light: #162550;
+      --gold: #C9A84C;
+      --gold-light: #F0D080;
+      --cream: #FFF8EE;
+      --white: #FFFFFF;
+      --text-dark: #1A1A2E;
+      --text-mid: #4A4A6A;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      background: var(--white);
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img, svg { max-width: 100%; }
+    a { -webkit-tap-highlight-color: transparent; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw;
+      height: 58px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .nav-logo {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      color: var(--gold);
+      font-size: 1.2rem;
+      letter-spacing: 0.02em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-bjp-flower {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      object-fit: contain;
+      flex-shrink: 0;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.18));
+    }
+    .nav-links { display: flex; gap: 1.6rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-fb {
+      background: var(--saffron);
+      color: var(--white) !important;
+      padding: 6px 14px;
+      border-radius: 4px;
+    }
+    .nav-fb:hover { background: var(--orange); color: var(--white) !important; }
+
+    /* ── HERO ── */
+    #hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 55%, #1e3a70 100%);
+      display: flex; align-items: flex-start;
+      padding: 90px 5vw 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-lotus {
+      position: absolute; right: -40px; top: 50%; transform: translateY(-50%);
+      width: min(520px, 55vw); opacity: 0.06;
+    }
+    .hero-saffron-bar {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 6px;
+      background: linear-gradient(90deg, var(--saffron), var(--orange), var(--gold));
+    }
+    .hero-inner {
+      display: flex; align-items: center; gap: 40px;
+      max-width: 1100px; width: 100%; position: relative; z-index: 2;
+    }
+    .hero-photo-wrap {
+      flex-shrink: 0;
+    }
+    .hero-photo {
+      width: 190px; height: 240px;
+      border-radius: 6px;
+      background: linear-gradient(160deg, #2a3f7a, #162550);
+      border: 3px solid var(--gold);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-photo svg { width: 90px; height: 90px; opacity: 0.5; }
+    .hero-photo-label {
+      position: absolute; bottom: 12px;
+      font-size: 0.7rem; color: var(--gold); text-align: center; padding: 0 10px;
+    }
+    .hero-text { flex: 1; }
+    .hero-tag {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 0.75rem;
+      padding: 4px 14px;
+      border-radius: 2px;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+    .hero-name {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      color: var(--gold);
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+    .hero-tagline {
+      color: rgba(255,255,255,0.75);
+      font-size: clamp(0.88rem, 1.5vw, 1.05rem);
+      max-width: 500px;
+      border-left: 3px solid var(--saffron);
+      padding-left: 16px;
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--saffron);
+      color: var(--white);
+      border: none; cursor: pointer;
+      padding: 12px 28px; border-radius: 4px;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 0.95rem; font-weight: 600;
+      text-decoration: none; display: inline-block;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-primary:hover { background: #e55d00; transform: translateY(-1px); }
+    .btn-outline {
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      padding: 11px 26px; border-radius: 4px;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 0.95rem; font-weight: 500;
+      text-decoration: none; display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { background: var(--gold); color: var(--navy); }
+    .hero-stats {
+      display: flex; gap: 32px; margin-top: 24px; flex-wrap: wrap;
+    }
+    .stat { text-align: left; }
+    .stat-num {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 2rem; color: var(--saffron); line-height: 1;
+    }
+    .stat-lbl { font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+    /* ── SECTION BASE ── */
+    section { padding: 80px 5vw; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .sec-head {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .sec-sub { color: var(--text-mid); font-size: 0.95rem; margin-bottom: 40px; max-width: 560px; }
+    .sec-rule { width: 56px; height: 3px; background: var(--saffron); margin-bottom: 32px; border-radius: 2px; }
+
+    /* ── PARICHAY ── */
+    #parichay { background: var(--cream); }
+    .parichay-grid {
+      display: grid; grid-template-columns: 1fr 1.6fr; gap: 60px; align-items: center;
+    }
+    .parichay-photo {
+      width: 100%; aspect-ratio: 3/4; border-radius: 6px;
+      background: linear-gradient(160deg, #d4e4ff, #aac3f0);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      border: 2px solid #c0d4f5;
+      position: relative; overflow: hidden;
+    }
+    .parichay-photo svg { width: 80px; height: 80px; opacity: 0.35; }
+    .parichay-photo-lbl {
+      font-size: 0.72rem; color: #7a9acb; margin-top: 10px;
+      text-align: center; padding: 0 16px;
+    }
+    .parichay-photo-badge {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(13,27,62,0.85), transparent);
+      padding: 24px 16px 14px;
+      font-size: 0.8rem; color: var(--gold); text-align: center;
+    }
+    .parichay-text p { margin-bottom: 16px; color: var(--text-mid); font-size: 0.97rem; }
+    .parichay-text strong { color: var(--navy); }
+    .highlights { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .hl-chip {
+      background: var(--navy);
+      color: var(--cream);
+      padding: 6px 16px; border-radius: 30px;
+      font-size: 0.8rem;
+    }
+
+    /* ── DRISHTI (VISION) ── */
+    #drishti { background: var(--white); }
+    .vision-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;
+    }
+    .vision-card {
+      border: 1px solid #e8e0d5;
+      border-radius: 6px; padding: 28px;
+      position: relative; overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .vision-card:hover { box-shadow: 0 8px 30px rgba(13,27,62,0.1); transform: translateY(-3px); }
+    .vision-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--saffron), var(--gold));
+    }
+    .vision-icon { font-size: 2.2rem; margin-bottom: 16px; }
+    .vision-card h3 { font-family: 'Tiro Devanagari Hindi', serif; font-size: 1.2rem; color: var(--navy); margin-bottom: 10px; }
+    .vision-card p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; }
+
+    /* ── SEVA KARYA ── */
+    #seva { background: var(--navy); }
+    #seva .sec-head { color: var(--white); }
+    #seva .sec-sub { color: rgba(255,255,255,0.65); }
+    .seva-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;
+    }
+    .seva-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 6px; padding: 28px;
+      transition: background 0.2s;
+    }
+    .seva-card:hover { background: rgba(255,255,255,0.1); }
+    .seva-num {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 2.2rem; color: var(--saffron); margin-bottom: 10px;
+    }
+    .seva-card h3 { font-size: 1.05rem; color: var(--gold); margin-bottom: 10px; }
+    .seva-card p { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.75; }
+
+    /* ── NETA (LEADERS) ── */
+    #neta { background: var(--cream); }
+    .neta-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px;
+    }
+    .neta-card {
+      text-align: center;
+      background: var(--white);
+      border-radius: 8px; padding: 28px 20px;
+      box-shadow: 0 4px 20px rgba(13,27,62,0.07);
+    }
+    .neta-img-wrap {
+      width: 120px; height: 120px; border-radius: 50%;
+      margin: 0 auto 16px;
+      overflow: hidden;
+      border: 3px solid var(--saffron);
+      background: #e8e0d5;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .neta-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .neta-img-placeholder { font-size: 3rem; opacity: 0.3; }
+    .neta-name { font-family: 'Tiro Devanagari Hindi', serif; font-size: 1.15rem; color: var(--navy); margin-bottom: 4px; }
+    .neta-role { font-size: 0.8rem; color: var(--text-mid); }
+    .neta-party { font-size: 0.75rem; color: var(--saffron); font-weight: 600; margin-top: 4px; }
+
+    /* ── GALLERY ── */
+    #gallery { background: var(--white); }
+    .gallery-scroll-wrap {
+      position: relative;
+    }
+    .gallery-grid {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 12px;
+      cursor: grab;
+    }
+    .gallery-grid:active { cursor: grabbing; }
+    .gallery-grid::-webkit-scrollbar { height: 6px; }
+    .gallery-grid::-webkit-scrollbar-track { background: #f0ebe3; border-radius: 3px; }
+    .gallery-grid::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+    .gallery-item {
+      flex-shrink: 0;
+      height: 320px;
+      width: auto;
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      scroll-snap-align: start;
+      box-shadow: 0 2px 12px rgba(13,27,62,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .gallery-item:hover { transform: scale(1.02); box-shadow: 0 6px 24px rgba(13,27,62,0.18); }
+    .gallery-item img {
+      height: 100%;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      background: #f1ebe1;
+      filter: saturate(0.95) contrast(1.02);
+    }
+    .gallery-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(13,27,62,0.8), transparent);
+      color: var(--cream); font-size: 0.78rem;
+      padding: 20px 10px 10px; text-align: center;
+    }
+    .gallery-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(13,27,62,0.7); color: var(--gold);
+      border: none; cursor: pointer;
+      width: 40px; height: 40px; border-radius: 50%;
+      font-size: 1.1rem; display: flex; align-items: center; justify-content: center;
+      z-index: 10; transition: background 0.2s;
+      user-select: none;
+    }
+    .gallery-arrow:hover { background: var(--navy); }
+    .gallery-arrow.left { left: 4px; }
+    .gallery-arrow.right { right: 4px; }
+    .gallery-note {
+      margin-top: 20px;
+      text-align: center;
+      color: var(--text-mid);
+      font-size: 0.85rem;
+      background: var(--cream);
+      border-radius: 6px;
+      padding: 14px;
+      border: 1px dashed #d4c8b8;
+    }
+
+    /* ── JAN SAMPARK ── */
+    #sampark-jan { background: linear-gradient(135deg, #f5f0ea, #fff8ee); }
+    .timeline { position: relative; max-width: 700px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 18px; top: 0; bottom: 0; width: 2px;
+      background: linear-gradient(to bottom, var(--saffron), var(--gold));
+    }
+    .tl-item { display: flex; gap: 28px; margin-bottom: 32px; position: relative; }
+    .tl-dot {
+      flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%;
+      background: var(--saffron);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; position: relative; z-index: 1;
+    }
+    .tl-body { padding-top: 6px; }
+    .tl-body h4 { font-size: 0.97rem; color: var(--navy); font-weight: 600; margin-bottom: 4px; }
+    .tl-body p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.6; }
+    .tl-date { font-size: 0.72rem; color: var(--saffron); font-weight: 600; margin-bottom: 4px; }
+
+    /* ── SAMPARK (CONTACT) ── */
+    #sampark { background: var(--navy); }
+    #sampark .sec-head { color: var(--white); }
+    #sampark .sec-sub { color: rgba(255,255,255,0.65); }
+    .sampark-wrap {
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: start;
+    }
+    .contact-form { }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block; font-size: 0.82rem; color: rgba(255,255,255,0.7);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 4px;
+      color: var(--white);
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 0.9rem;
+      padding: 10px 14px;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--gold); }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    .form-group select option { background: var(--navy); }
+    .form-submit {
+      width: 100%;
+      background: var(--saffron);
+      color: var(--white);
+      border: none; cursor: pointer;
+      padding: 13px;
+      border-radius: 4px;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 1rem; font-weight: 600;
+      transition: background 0.2s;
+    }
+    .form-submit:hover { background: #e55d00; }
+    .form-success {
+      display: none;
+      background: rgba(0,180,100,0.15);
+      border: 1px solid rgba(0,180,100,0.4);
+      border-radius: 6px;
+      padding: 16px;
+      color: #7fffc4;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 16px;
+    }
+    .contact-info { }
+    .contact-block { margin-bottom: 28px; }
+    .contact-block h4 { color: var(--gold); font-size: 0.88rem; margin-bottom: 10px; font-weight: 600; }
+    .contact-block p, .contact-block a {
+      color: rgba(255,255,255,0.7); font-size: 0.88rem;
+      text-decoration: none; display: block; margin-bottom: 6px;
+      transition: color 0.2s;
+    }
+    .contact-block a:hover { color: var(--gold); }
+    .social-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+    .social-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--white); text-decoration: none;
+      padding: 9px 18px; border-radius: 4px;
+      font-size: 0.85rem; transition: all 0.2s;
+    }
+    .social-btn.fb { border-color: #1877F2; color: #6fa8ff; }
+    .social-btn.fb:hover { background: #1877F2; color: var(--white); }
+    .quote-box {
+      background: rgba(201,168,76,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 18px 20px; border-radius: 0 6px 6px 0;
+      margin-top: 28px;
+    }
+    .quote-box p { color: rgba(255,255,255,0.8); font-size: 0.92rem; font-style: italic; line-height: 1.8; }
+    .quote-box cite { color: var(--gold); font-size: 0.78rem; display: block; margin-top: 8px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060e22;
+      color: rgba(255,255,255,0.45);
+      text-align: center; padding: 24px 5vw;
+      font-size: 0.78rem;
+    }
+    footer span { color: var(--gold); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 18px;
+        height: 52px;
+      }
+      .nav-logo {
+        font-size: 1rem;
+        white-space: nowrap;
+      }
+      .hero {
+        padding-top: 90px;
+      }
+      .hero-inner { flex-direction: column; gap: 28px; align-items: center; text-align: center; }
+      .hero-photo { width: 150px; height: 190px; }
+      .hero-text { width: 100%; }
+      .hero-tagline {
+        max-width: none;
+        padding-left: 0;
+        border-left: none;
+        border-top: 3px solid var(--saffron);
+        padding-top: 14px;
+      }
+      .hero-buttons { justify-content: center; }
+      .hero-stats {
+        justify-content: center;
+        gap: 18px 22px;
+      }
+      .parichay-grid { grid-template-columns: 1fr; }
+      .parichay-photo { max-width: 480px; margin: 0 auto; }
+      .sampark-wrap { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .gallery-item { height: 240px; }
+      .hero-stats { gap: 20px; }
+    }
+
+    @media (max-width: 480px) {
+      #hero { padding: 88px 18px 42px; }
+      .hero-name { font-size: clamp(1.9rem, 9vw, 2.8rem); }
+      .hero-subtitle { font-size: 0.94rem; }
+      .hero-tag { letter-spacing: 0.03em; }
+      .btn-primary, .btn-outline {
+        width: 100%;
+        text-align: center;
+      }
+      .gallery-item { height: 200px; }
+      .floating-mobile-fix { display: none; }
+    }
+
+    /* ── SCROLL REVEAL (minimal) ── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img class="nav-bjp-flower" src="images/PartySign/Kamal3.png" alt="भाजपा प्रतीक" />
+    रवि कांत मिश्रा
+  </div>
+  <ul class="nav-links">
+    <li><a href="#parichay">परिचय</a></li>
+    <li><a href="#drishti">दृष्टि</a></li>
+    <li><a href="#seva">सेवा कार्य</a></li>
+    <li><a href="#neta">नेतृत्व</a></li>
+    <li><a href="#gallery">गैलरी</a></li>
+    <li><a href="#sampark">संपर्क</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <!-- Background lotus SVG -->
+  <svg class="hero-lotus" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="200" cy="300" rx="60" ry="20" fill="white"/>
+    <path d="M200 280 C180 240 120 200 100 140 C140 160 180 190 200 220 C220 190 260 160 300 140 C280 200 220 240 200 280Z" fill="white"/>
+    <path d="M200 260 C170 210 90 180 60 100 C120 130 170 170 200 210 C230 170 280 130 340 100 C310 180 230 210 200 260Z" fill="white"/>
+    <path d="M200 240 C160 180 60 160 20 60 C100 100 160 150 200 200 C240 150 300 100 380 60 C340 160 240 180 200 240Z" fill="white"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-photo-wrap">
+      <div class="hero-photo">
+        <img src="images/ravi-mishra.jpg" alt="पं. रवि कांत मिश्रा" style="width:100%;height:100%;object-fit:cover;object-position:top;"/>
+      </div>
+    </div>
+    <div class="hero-text">
+      <div class="hero-tag">भारतीय जनता पार्टी &nbsp;|&nbsp; उत्तर प्रदेश</div>
+      <h1 class="hero-name">पं. रवि कांत मिश्रा</h1>
+      <div class="hero-subtitle">वरिष्ठ भाजपा नेता &nbsp;·&nbsp; वरिष्ठ समाजसेवी &nbsp;·&nbsp; पूर्व विधायक प्रत्याशी &nbsp;·&nbsp; मथुरा-वृंदावन (84 विधानसभा)</div>
+      <p class="hero-tagline">
+        सेवा, संकल्प और सुशासन के पथ पर —<br/>
+        एक समर्पित कार्यकर्ता जो जनता की आवाज़ को सत्ता के गलियारों तक पहुँचाता है।
+      </p>
+      <div class="hero-buttons">
+        <a href="#sampark" class="btn-primary">संपर्क करें</a>
+        <a href="#seva" class="btn-outline">सेवा कार्य देखें</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">१०+</div><div class="stat-lbl">वर्षों की भाजपा सेवा</div></div>
+        <div class="stat"><div class="stat-num">हज़ारों</div><div class="stat-lbl">परिवारों तक पहुँच</div></div>
+        <div class="stat"><div class="stat-num">२०२७</div><div class="stat-lbl">विकसित उत्तर प्रदेश का संकल्प</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-saffron-bar"></div>
+</section>
+
+<!-- PARICHAY -->
+<section id="parichay">
+  <div class="section-inner">
+    <div class="parichay-grid reveal">
+      <div>
+        <div class="parichay-photo" style="aspect-ratio:auto;">
+          <img src="images/ravi-mishra-banner.png" alt="पं. रवि कांत मिश्रा — ब्रज सेवक" style="width:100%;display:block;border-radius:6px;"/>
+        </div>
+      </div>
+      <div class="parichay-text">
+        <p class="sec-head">परिचय</p>
+        <div class="sec-rule"></div>
+        <p>श्री <strong>पं. रवि कांत मिश्रा जी</strong> — "ब्रज सेवक" के रूप में जाने जाते हैं — पूज्य पिता श्री सतीश चंद्र मिश्र जी एवं माता श्रीमती कमला देवी जी के आशीर्वाद से सींचे हुए, वृन्दावन (मथुरा) में निवास करते हैं। पिछले एक दशक से भारतीय जनता पार्टी के एक समर्पित एवं ऊर्जावान वरिष्ठ नेता के रूप में जनसेवा में लगे हैं। वे मथुरा-वृंदावन (84 विधानसभा) से पूर्व विधायक प्रत्याशी रह चुके हैं।</p>
+        <p>एक स्थापित शिक्षाविद् एवं उद्यमी के रूप में वे पिछले 15 वर्षों से <strong>रवि नोडी प्ले स्कूल एवं व्हाइट फील्ड डे-केयर</strong> का संचालन कर रहे हैं, तथा <strong>रवि सत्यम बिल्डर्स एवं प्रॉपर्टीज लिमिटेड</strong> के माध्यम से पिछले 20 वर्षों से रियल एस्टेट एवं सिविल निर्माण क्षेत्र में उनकी विशेष पहचान है।</p>
+        <p>वे मथुरा-वृंदावन विधानसभा क्षेत्र में अपनी गहरी पैठ रखते हैं और भाजपा के राष्ट्रीय, प्रादेशिक नेतृत्व के साथ सक्रिय सहयोग करते हैं। श्री विनोद तावड़े जी, श्री बी.एल. संतोष जी एवं श्री सुनील बंसल जी जैसे वरिष्ठ नेताओं ने उनकी निष्ठा व कड़ी मेहनत को सराहा है।</p>
+        <div class="highlights">
+          <span class="hl-chip">🪷 भाजपा कार्यकर्ता</span>
+          <span class="hl-chip">🏛️ मथुरा-वृंदावन</span>
+          <span class="hl-chip">🏫 शिक्षाविद् एवं उद्यमी</span>
+          <span class="hl-chip">🙏 सामाजिक सेवा</span>
+          <span class="hl-chip">📿 राष्ट्रवाद</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DRISHTI (VISION) -->
+<section id="drishti">
+  <div class="section-inner">
+    <p class="sec-head reveal">दृष्टि एवं संकल्प</p>
+    <div class="sec-rule reveal"></div>
+    <p class="sec-sub reveal">मथुरा-वृंदावन के चहुँमुखी विकास के लिए प्रतिबद्ध — श्री रवि कांत मिश्रा जी की प्राथमिकताएँ</p>
+    <div class="vision-grid">
+      <div class="vision-card reveal">
+        <div class="vision-icon">🛕</div>
+        <h3>धार्मिक पर्यटन विकास</h3>
+        <p>मथुरा-वृंदावन को अयोध्या की तरह विश्वस्तरीय तीर्थ नगरी के रूप में विकसित करना — रोपवे, बेहतर पार्किंग, स्वच्छता और श्रद्धालुओं के लिए उत्तम सुविधाएँ।</p>
+      </div>
+      <div class="vision-card reveal">
+        <div class="vision-icon">🏥</div>
+        <h3>स्वास्थ्य सेवा सबके लिए</h3>
+        <p>जरूरतमंद वर्ग — सिक्योरिटी गार्ड, घरेलू कामगार — को निःशुल्क चिकित्सा सुलभ कराना। लोकमंच स्वास्थ्य प्रकल्प के माध्यम से इस दिशा में प्रयास जारी है।</p>
+      </div>
+      <div class="vision-card reveal">
+        <div class="vision-icon">🌊</div>
+        <h3>जलनिकासी व बुनियादी ढाँचा</h3>
+        <p>मथुरा-वृंदावन में बारिश के समय जलभराव की पुरानी समस्या का स्थायी समाधान। व्यापारियों और श्रद्धालुओं को राहत देना।</p>
+      </div>
+      <div class="vision-card reveal">
+        <div class="vision-icon">🚔</div>
+        <h3>सुरक्षित एवं सुव्यवस्थित नगर</h3>
+        <p>मथुरा-वृंदावन में पुलिस बल विस्तार, नया वृंदावन पुलिस सर्किल, ट्रैफिक सुधार — नगर को सुरक्षित बनाना।</p>
+      </div>
+      <div class="vision-card reveal">
+        <div class="vision-icon">🌿</div>
+        <h3>प्लास्टिक मुक्त ब्रज</h3>
+        <p>मुख्यमंत्री योगी जी के निर्देशानुसार मथुरा-वृंदावन को पूर्णतः प्लास्टिक मुक्त बनाने के अभियान में सक्रिय भागीदारी।</p>
+      </div>
+      <div class="vision-card reveal">
+        <div class="vision-icon">🎓</div>
+        <h3>युवा एवं शिक्षा</h3>
+        <p>क्षेत्र के युवाओं के लिए शिक्षा, रोजगार के अवसर और महिला सशक्तिकरण — विकसित उत्तर प्रदेश का संकल्प।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEVA KARYA -->
+<section id="seva">
+  <div class="section-inner">
+    <p class="sec-head reveal">सेवा कार्य</p>
+    <div class="sec-rule reveal"></div>
+    <p class="sec-sub reveal" style="color:rgba(255,255,255,0.65)">जनसेवा ही ईश्वर सेवा है — रवि कांत मिश्रा जी के प्रमुख सामाजिक कार्य</p>
+    <div class="seva-grid">
+      <div class="seva-card reveal">
+        <div class="seva-num">🏥</div>
+        <h3>लोकमंच — स्वास्थ्य प्रकल्प</h3>
+        <p>हजारों सिक्योरिटी गार्ड और घरेलू कामगारों को बड़े अस्पताल में इलाज कराने में असमर्थता होती है। लोकमंच के स्वास्थ्य प्रकल्प के माध्यम से निःशुल्क इलाज की सुविधा उपलब्ध कराने की दिशा में प्रयास जारी है, ताकि आर्थिक रूप से कमजोर वर्ग को भी बेहतर स्वास्थ्य सेवा मिल सके।</p>
+      </div>
+      <div class="seva-card reveal">
+        <div class="seva-num">💉</div>
+        <h3>स्वास्थ्य शिविर एवं टीकाकरण</h3>
+        <p>HPV टीकाकरण जागरूकता अभियान, स्वास्थ्य शिविर आयोजन — बेटियों को कैंसर जैसी घातक बीमारियों से बचाने के लिए उत्तर प्रदेश स्वास्थ्य विभाग के कार्यक्रमों में सहयोग।</p>
+      </div>
+      <div class="seva-card reveal">
+        <div class="seva-num">🤝</div>
+        <h3>जन संपर्क अभियान</h3>
+        <p>प्रधानमंत्री श्री नरेंद्र मोदी जी के 12 वर्षों की उपलब्धियों को जन-जन तक पहुँचाना। सेवा, सुशासन एवं गरीब कल्याण पत्रक वितरण — मथुरा-वृंदावन के हर वर्ग से संवाद।</p>
+      </div>
+      <div class="seva-card reveal">
+        <div class="seva-num">🚩</div>
+        <h3>सांस्कृतिक एवं धार्मिक कार्यक्रम</h3>
+        <p>श्रीमद्भागवत कथा, हनुमान चालीसा, योग शिविर — सामाजिक एवं आध्यात्मिक चेतना जागृत करने के लिए नियमित आयोजन। जन-जन को जोड़ने का माध्यम।</p>
+      </div>
+      <div class="seva-card reveal">
+        <div class="seva-num">🤲</div>
+        <h3>जनशक्ति सेवा समिति</h3>
+        <p>रवि कांत मिश्रा जी द्वारा स्थापित <strong>जनशक्ति सेवा समिति (रजि.)</strong> — जनसेवा हेतु एक सशक्त मंच। जनसमस्याओं के निराकरण के लिए प्राधिकरण एवं जिला प्रशासन से सीधा संवाद स्थापित करने की दिशा में सतत प्रयासरत।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NETA (LEADERS) -->
+<section id="neta">
+  <div class="section-inner">
+    <p class="sec-head reveal">नेतृत्व जिनसे प्रेरणा</p>
+    <div class="sec-rule reveal"></div>
+    <p class="sec-sub reveal">श्री रवि कांत मिश्रा जी जिन महान नेताओं के मार्गदर्शन में कार्य करते हैं</p>
+    <div class="neta-grid">
+      <div class="neta-card reveal">
+        <div class="neta-img-wrap">
+          <img src="images/narendra-modi.jpg" alt="नरेंद्र मोदी जी" loading="lazy"/>
+        </div>
+        <div class="neta-name">श्री नरेंद्र मोदी जी</div>
+        <div class="neta-role">प्रधानमंत्री, भारत</div>
+        <div class="neta-party">भाजपा राष्ट्रीय नेतृत्व</div>
+      </div>
+      <div class="neta-card reveal">
+        <div class="neta-img-wrap">
+          <img src="images/mahesh-sharma.jpg" alt="महेश शर्मा जी" loading="lazy"/>
+        </div>
+        <div class="neta-name">डॉ. महेश शर्मा जी</div>
+        <div class="neta-role">सांसद, गौतम बुद्ध नगर (नोएडा)</div>
+        <div class="neta-party">भाजपा सांसद</div>
+      </div>
+      <div class="neta-card reveal">
+        <div class="neta-img-wrap">
+          <img src="images/pankaj-singh.jpg" alt="पंकज सिंह जी" loading="lazy"/>
+        </div>
+        <div class="neta-name">श्री पंकज सिंह जी</div>
+        <div class="neta-role">विधायक, नोएडा विधानसभा</div>
+        <div class="neta-party">भाजपा विधायक</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JAN SAMPARK TIMELINE -->
+<section id="sampark-jan">
+  <div class="section-inner">
+    <p class="sec-head reveal">जन संपर्क की झलकियाँ</p>
+    <div class="sec-rule reveal"></div>
+    <p class="sec-sub reveal">प्रमुख नेताओं, संतों एवं जनता से मिलकर क्षेत्र की आवाज़ उठाते रवि कांत मिश्रा जी</p>
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-dot">🤝</div>
+        <div class="tl-body">
+          <div class="tl-date">जुलाई २०२६</div>
+          <h4>श्री सुनील बंसल जी से मुलाकात</h4>
+          <p>भाजपा राष्ट्रीय महामंत्री से दिल्ली कार्यालय में भेंट। बंसल जी ने कहा — "दस साल से आपकी गतिविधियाँ और योगदान जानता हूँ, मेहनत जारी रखिए।"</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">📋</div>
+        <div class="tl-body">
+          <div class="tl-date">जुलाई २०२६</div>
+          <h4>भाजपा राष्ट्रीय कार्यालय, दिल्ली</h4>
+          <p>महासचिव (संगठन) श्री बी.एल. संतोष जी से मुलाकात कर मथुरा-वृंदावन विधानसभा क्षेत्र की राजनीतिक स्थिति से अवगत कराया।</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">🙏</div>
+        <div class="tl-body">
+          <div class="tl-date">जून २०२६</div>
+          <h4>श्री विनोद तावड़े जी से भेंट</h4>
+          <p>भाजपा राष्ट्रीय महासचिव व राज्यसभा सांसद से दिल्ली आवास पर मुलाकात — मथुरा-वृंदावन की राजनीतिक गतिविधियों पर विस्तृत चर्चा।</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">🛕</div>
+        <div class="tl-body">
+          <div class="tl-date">जून २०२६</div>
+          <h4>श्री कृष्ण जन्मभूमि दर्शन</h4>
+          <p>मथुरा स्थित श्री कृष्ण जन्मभूमि में दर्शन एवं प्रमुख पदाधिकारी श्री गोपेश्वर नाथ चतुर्वेदी जी से मुलाकात कर आशीर्वाद प्राप्त किया।</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">🏥</div>
+        <div class="tl-body">
+          <div class="tl-date">जून २०२६</div>
+          <h4>लोकमंच स्वास्थ्य प्रकल्प</h4>
+          <p>सिक्योरिटी गार्डों एवं घरेलू कामगारों के लिए निःशुल्क स्वास्थ्य सेवा की नई शुरुआत — "परिवर्तन लाकर ही रहेंगे।"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-inner">
+    <p class="sec-head reveal">फोटो गैलरी</p>
+    <div class="sec-rule reveal"></div>
+    <p class="sec-sub reveal">जनसेवा, सांस्कृतिक कार्यक्रम एवं जन संपर्क के क्षण</p>
+    <div class="gallery-scroll-wrap">
+      <button class="gallery-arrow left" id="galleryLeft">&#8249;</button>
+      <div class="gallery-grid reveal" id="galleryScroll">
+        <div class="gallery-item">
+          <img src="images/Gallery/4a6703f9-44dc-441d-8251-fd1312b6fc95.jpg" alt="जन संपर्क कार्यक्रम" loading="lazy"/>
+          <div class="gallery-overlay">जन संपर्क कार्यक्रम</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/ef92bad7-c4b9-478d-b6a9-7370a791fb5a.jpg" alt="सामाजिक कार्यक्रम" loading="lazy"/>
+          <div class="gallery-overlay">सामाजिक कार्यक्रम</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/0b9fff14-4d47-4067-93f3-180f58fb3bc3.jpg" alt="कार्यकर्ता परिचर्चा" loading="lazy"/>
+          <div class="gallery-overlay">कार्यकर्ता परिचर्चा</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/24f9c24e-364b-4e29-91db-51ce2417a5d5.jpg" alt="जन सहयोग कार्यक्रम" loading="lazy"/>
+          <div class="gallery-overlay">जन सहयोग कार्यक्रम</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/672d5f1c-7e83-4747-b58d-ba8b6b922765.jpg" alt="सांस्कृतिक कार्यक्रम" loading="lazy"/>
+          <div class="gallery-overlay">सांस्कृतिक कार्यक्रम</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/48a97671-7a6e-4b06-8dc2-0c2ccaf35f1e.jpg" alt="भाजपा कार्यक्रम" loading="lazy"/>
+          <div class="gallery-overlay">भाजपा कार्यक्रम</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/e5866983-c6ba-416a-b88b-a26ef5c2d91d.jpg" alt="नेतृत्व भेंट" loading="lazy"/>
+          <div class="gallery-overlay">नेतृत्व भेंट</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/d52ddb92-c31d-4942-a866-ee4ab05e0f81.jpg" alt="मिलन समारोह" loading="lazy"/>
+          <div class="gallery-overlay">मिलन समारोह</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/dbbfd354-4a43-4697-8b16-ca34fa6b67ae.jpg" alt="कार्यकर्ताओं से संवाद" loading="lazy"/>
+          <div class="gallery-overlay">कार्यकर्ताओं से संवाद</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/c2ae4e56-b642-4207-8ef6-64fd7d184b9b.jpg" alt="जनसेवा कार्यक्रम" loading="lazy"/>
+          <div class="gallery-overlay">जनसेवा कार्यक्रम</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/82724609-7ea1-4658-8015-6329656e5ce9.jpg" alt="धार्मिक आयोजन" loading="lazy"/>
+          <div class="gallery-overlay">धार्मिक आयोजन</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/3ee5715c-f48e-47d7-bbca-33487923ba79.jpg" alt="सामुदायिक सेवा" loading="lazy"/>
+          <div class="gallery-overlay">सामुदायिक सेवा</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/24e80b70-964b-4873-98ad-2a80c3759dc3.jpg" alt="भाजपा सहयोग" loading="lazy"/>
+          <div class="gallery-overlay">भाजपा सहयोग</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/10649734-3e79-4e35-920d-f02bb198e59e.jpg" alt="जन संवाद" loading="lazy"/>
+          <div class="gallery-overlay">जन संवाद</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallery/4a6703f9-44dc-441d-8251-fd1312b6fc95 (1).jpg" alt="विशेष कार्यक्रम" loading="lazy"/>
+          <div class="gallery-overlay">विशेष कार्यक्रम</div>
+        </div>
+      </div>
+      <button class="gallery-arrow right" id="galleryRight">&#8250;</button>
+    </div>
+    <div class="gallery-note">
+      📸 अधिक फोटो देखने के लिए <a href="https://www.facebook.com/ravimishra2121/photos" target="_blank" style="color:var(--saffron);font-weight:600;">Facebook फोटो एल्बम</a> पर जाएं
+    </div>
+  </div>
+</section>
+
+<!-- SAMPARK (CONTACT) -->
+<section id="sampark">
+  <div class="section-inner">
+    <p class="sec-head reveal">संपर्क करें</p>
+    <div class="sec-rule reveal"></div>
+    <p class="sec-sub reveal" style="color:rgba(255,255,255,0.65)">अपनी समस्या, सुझाव या संदेश सीधे रवि कांत मिश्रा जी तक पहुँचाएं</p>
+    <div class="sampark-wrap reveal">
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="naam">आपका नाम *</label>
+            <input type="text" id="naam" name="naam" placeholder="पूरा नाम लिखें" required/>
+          </div>
+          <div class="form-group">
+            <label for="mobile">मोबाइल नंबर *</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="10 अंकों का नंबर" required/>
+          </div>
+          <div class="form-group">
+            <label for="email">ईमेल पता</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com"/>
+          </div>
+          <div class="form-group">
+            <label for="vishay">विषय *</label>
+            <select id="vishay" name="vishay" required>
+              <option value="">— चुनें —</option>
+              <option value="samasyaa">क्षेत्र की समस्या</option>
+              <option value="swasthya">स्वास्थ्य सेवा अनुरोध</option>
+              <option value="bjp">भाजपा कार्यक्रम</option>
+              <option value="vikas">विकास कार्य सुझाव</option>
+              <option value="anya">अन्य</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="sandesh">आपका संदेश *</label>
+            <textarea id="sandesh" name="sandesh" placeholder="अपनी बात विस्तार से लिखें..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">संदेश भेजें →</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          ✅ आपके संदेश को ईमेल ऐप में तैयार कर दिया गया है। कृपया ईमेल भेजें, और रवि कांत मिश्रा जी शीघ्र संपर्क करेंगे। 🙏
+        </div>
+      </div>
+      <div class="contact-info">
+        <div class="contact-block">
+          <h4>📍 पता</h4>
+          <p>ए-203, श्री कृष्णा शरणम् सोसायटी,</p>
+          <p>चैतन्य विहार, वृन्दावन, मथुरा (उ.प्र.) - 281001</p>
+          <p>कार्यक्षेत्र: मथुरा-वृंदावन विधानसभा (84)</p>
+        </div>
+        <div class="contact-block">
+          <h4>📞 मोबाइल</h4>
+          <a href="tel:+919810013921">+91 98100 13921</a>
+          <a href="mailto:ravi019971@gmail.com">ravi019971@gmail.com</a>
+        </div>
+        <div class="contact-block">
+          <h4>🔗 सोशल मीडिया</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/ravimishra2121" target="_blank" class="social-btn fb">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook पर जुड़ें
+            </a>
+          </div>
+        </div>
+        <div class="quote-box">
+          <p>"जो कार्यकर्ता पार्टी को आगे बढ़ाने का कार्य करेंगे, उन्हीं को संगठन आगे बढ़ायेगा। कड़ी मेहनत करने वालों को ही प्राथमिकता मिलेगी।"</p>
+          <cite>— श्री विनोद तावड़े जी, भाजपा राष्ट्रीय महासचिव</cite>
+        </div>
+        <div class="contact-block" style="margin-top:24px;">
+          <h4>🕐 उपलब्धता</h4>
+          <p>प्रातः ९:०० से सायं ७:०० बजे तक</p>
+          <p>रविवार को विशेष जन संपर्क</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© २०२६ श्री रवि कांत मिश्रा जी &nbsp;|&nbsp; <span>भाजपा है तो मुमकिन है 🚩</span></p>
+  <p style="margin-top:8px; font-size:0.72rem; opacity:0.6;">मथुरा-वृंदावन · उत्तर प्रदेश</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => io.observe(el));
+
+  // Gallery horizontal scroll — arrow buttons
+  const galleryScroll = document.getElementById('galleryScroll');
+  document.getElementById('galleryLeft').addEventListener('click', () => {
+    galleryScroll.scrollBy({ left: -340, behavior: 'smooth' });
+  });
+  document.getElementById('galleryRight').addEventListener('click', () => {
+    galleryScroll.scrollBy({ left: 340, behavior: 'smooth' });
+  });
+
+  // Gallery drag-to-scroll (mouse)
+  let isDown = false, startX, scrollLeft;
+  galleryScroll.addEventListener('mousedown', e => {
+    isDown = true; galleryScroll.classList.add('active');
+    startX = e.pageX - galleryScroll.offsetLeft;
+    scrollLeft = galleryScroll.scrollLeft;
+  });
+  galleryScroll.addEventListener('mouseleave', () => { isDown = false; });
+  galleryScroll.addEventListener('mouseup', () => { isDown = false; });
+  galleryScroll.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - galleryScroll.offsetLeft;
+    galleryScroll.scrollLeft = scrollLeft - (x - startX) * 1.5;
+  });
+
+  // Contact form → mailto
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const naam    = document.getElementById('naam').value;
+    const mobile  = document.getElementById('mobile').value;
+    const email   = document.getElementById('email').value;
+    const vishay  = document.getElementById('vishay').value;
+    const sandesh = document.getElementById('sandesh').value;
+
+    const subject = encodeURIComponent('संपर्क: ' + vishay + ' — ' + naam);
+    const body = encodeURIComponent(
+      'नाम: ' + naam + '\n' +
+      'मोबाइल: ' + mobile + '\n' +
+      'ईमेल: ' + (email || 'नहीं दिया') + '\n' +
+      'विषय: ' + vishay + '\n\n' +
+      'संदेश:\n' + sandesh
+    );
+
+    window.location.href = 'mailto:ravi019971@gmail.com?subject=' + subject + '&body=' + body;
+
+    document.getElementById('formSuccess').style.display = 'block';
+    this.reset();
+    setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 6000);
+  });
+</script>
+</body>
+</html>
