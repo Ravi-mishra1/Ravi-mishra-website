@@ -79,7 +79,7 @@ p:last-child{margin-bottom:0}
 .sec + .sec{border-top:1px solid var(--rule-soft)}
 .sec-head{margin-bottom:clamp(2rem,4vw,3.25rem);max-width:54ch}
 .sec-head p{color:var(--text-2);margin-top:.85rem;margin-bottom:0}
-.orn{display:flex;align-items:center;gap:.6rem;margin-bottom:1rem}
+.orn{display:none}
 .orn i{display:block;height:1px;width:2.4rem;background:var(--accent-fill);opacity:.7}
 .orn svg{width:26px;height:19px;color:var(--accent-fill);flex:none}
 
@@ -101,14 +101,14 @@ p:last-child{margin-bottom:0}
   -webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--rule-soft)}
 .hdr-in{max-width:74rem;margin:0 auto;padding:.7rem var(--pad);display:flex;align-items:center;gap:.8rem}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;flex:none}
-.brand > svg{width:48px;height:52px;flex:none}.brand > img{width:72px;height:72px;object-fit:contain;flex:none}
-.brand b{font-family:var(--font-d);font-weight:400;font-size:1.06rem;line-height:1.15;white-space:nowrap}
-.brand i{display:block;font-style:normal;font-family:var(--font-b);font-size:.68rem;letter-spacing:.05em;color:var(--text-3);line-height:1.5}
+.brand > svg{width:100px;height:106px;flex:none}.brand > img{width:124px;height:124px;object-fit:contain;flex:none}
+.brand b{font-family:var(--font-d);font-weight:400;font-size:1.5rem;line-height:1.15;white-space:nowrap}
+.brand i{display:block;font-style:normal;font-family:var(--font-b);font-size:.96rem;letter-spacing:.05em;color:var(--text-3);line-height:1.5}
 nav{margin-inline-start:auto;display:flex;align-items:center;gap:.1rem}
-nav a{text-decoration:none;font-size:.9rem;font-weight:500;color:var(--text-2);padding:.45rem .58rem;border-radius:3px;white-space:nowrap}
+nav a{text-decoration:none;font-size:1.12rem;font-weight:500;color:var(--text-2);padding:.45rem .65rem;border-radius:3px;white-space:nowrap}
 nav a:hover{color:var(--text);background:var(--surface-2)}
 .lang{margin-inline-start:.6rem;display:flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden;flex:none;background:var(--surface)}
-.lang button{font-family:var(--font-b);font-size:.8rem;font-weight:600;padding:.38rem .85rem;border:0;background:transparent;
+.lang button{font-family:var(--font-b);font-size:1rem;font-weight:600;padding:.52rem 1.1rem;border:0;background:transparent;
   color:var(--text-2);cursor:pointer;line-height:1.5;white-space:nowrap}
 .lang button[aria-pressed="true"]{background:var(--accent-fill);color:#2A1E14}
 .burger{display:none;background:transparent;border:1px solid var(--rule);border-radius:3px;padding:.44rem .55rem;cursor:pointer;color:var(--text)}
@@ -247,6 +247,14 @@ nav a:hover{color:var(--text);background:var(--surface-2)}
 .tile.no-img figcaption{position:static;background:none;color:var(--text-2);padding:0}
 .gal-note{margin-top:1.6rem;font-size:.92rem;color:var(--text-2)}
 .gal-note a{color:var(--accent);text-underline-offset:3px}
+.tile.album{cursor:pointer}
+.album-badge{position:absolute;top:.6rem;inset-inline-end:.6rem;display:inline-flex;align-items:center;gap:.3rem;background:rgba(8,20,22,.82);color:#F5EDE0;font-size:.82rem;font-weight:700;padding:.28rem .65rem;border-radius:999px;z-index:2}
+.album-badge svg{width:12px;height:12px}
+.lb.album img{width:min(80vh,92vw);height:min(80vh,92vw);max-height:none;object-fit:contain;background:#0a0a0a}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:2.8rem;height:2.8rem;display:none;place-content:center;background:rgba(20,14,8,.55);border:1px solid rgba(216,196,160,.4);color:#E9DCC5;border-radius:50%;cursor:pointer}
+.lb.album .lb-nav{display:grid}
+.lb-nav svg{width:20px;height:20px}
+.lb-prev{inset-inline-start:1rem}.lb-next{inset-inline-end:1rem}
 .lb{position:fixed;inset:0;z-index:200;background:rgba(14,10,6,.94);display:none;align-items:center;justify-content:center;
   padding:calc(3.5rem + env(safe-area-inset-top,0px)) 1.5rem calc(1.5rem + env(safe-area-inset-bottom,0px))}
 .lb.open{display:flex}
@@ -348,11 +356,26 @@ footer > .sj-band{margin-bottom:2.2rem}
 @media (max-width:640px){.leads,.tier + .leads + .tier + .leads{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-flow:dense}
 .grid .tile:nth-child(1),.grid .tile:nth-child(8){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.grid .tile.album{grid-column:span 1!important;grid-row:span 1!important;aspect-ratio:1}
+.grid .tile.album img{width:100%;height:100%;object-fit:cover}
+#grid{display:flex;justify-content:center;gap:0}
+.gal-slideshow{width:clamp(280px,60vw,640px);aspect-ratio:1;border-radius:8px;overflow:hidden;position:relative;background:var(--deep-2);cursor:pointer;box-shadow:0 8px 40px rgba(0,0,0,.18)}
+.gal-slideshow img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .4s ease}
+.gal-slideshow figcaption{position:absolute;inset-inline:0;bottom:0;padding:1.8rem .9rem .7rem;background:linear-gradient(0deg,rgba(8,20,22,.72),transparent);color:#F5EDE0;font-size:.9rem}
+.gal-slideshow .album-badge{position:absolute;top:.8rem;inset-inline-end:.8rem}
+.gal-arr{position:absolute;top:50%;transform:translateY(-50%);width:2.6rem;height:2.6rem;display:grid;place-content:center;background:rgba(8,20,22,.55);border:1px solid rgba(245,237,224,.4);color:#F5EDE0;border-radius:50%;cursor:pointer;z-index:3;transition:background .18s}
+.gal-arr:hover{background:rgba(8,20,22,.82)}
+.gal-arr svg{width:18px;height:18px}
+.gal-arr.prev{inset-inline-start:.7rem}
+.gal-arr.next{inset-inline-end:.7rem}
+.tile.album-empty{background:var(--surface-2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;cursor:default;border:1px solid var(--rule-soft)}
+.tile.album-empty figcaption{position:static;background:none;color:var(--text-3);font-size:.92rem;text-align:center;padding:0}
+.alb-ph-ico svg{width:3rem;height:2.2rem;color:var(--text-3)}
 @media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .deep{background-color:var(--deep);background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.06' stroke-width='1'%3E%3Cpath d='M28 4L34 22L52 28L34 34L28 52L22 34L4 28L22 22Z'/%3E%3Ccircle cx='28' cy='28' r='9'/%3E%3Cpath d='M0 0L10 10M56 0L46 10M0 56L10 46M56 56L46 46'/%3E%3C/g%3E%3C/svg%3E");background-size:56px 56px}
 
 /* ── header CTA ─────────────────────────────────────────── */
-.hdr-cta{flex:none;text-decoration:none;font-size:.85rem;font-weight:600;padding:.38rem .95rem;border-radius:999px;border:1px solid var(--accent-fill);color:var(--accent);margin-inline-start:.4rem;white-space:nowrap}
+.hdr-cta{flex:none;text-decoration:none;font-size:1.05rem;font-weight:600;padding:.55rem 1.3rem;border-radius:999px;border:1px solid var(--accent-fill);color:var(--accent);margin-inline-start:.4rem;white-space:nowrap}
 .hdr-cta:hover{background:var(--accent-fill);color:#2A1E14}
 @media (max-width:1100px){.hdr-cta{display:none}}
 
@@ -791,7 +814,7 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
         </div>
         <p class="place">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10.4c0 5.4-8 12.1-8 12.1s-8-6.7-8-12.1a8 8 0 1116 0z"/><circle cx="12" cy="10.2" r="2.8"/></svg>
-          <span data-l="hi">वृन्दावन, मथुरा — मथुरा-वृंदावन 84 विधानसभा</span><span data-l="en">Vrindavan, Mathura — Mathura-Vrindavan, Assembly 84</span>
+          <span data-l="hi">मथुरा-वृंदावन 84 विधानसभा</span><span data-l="en">Mathura-Vrindavan, Assembly 84</span>
         </p>
         <p class="tag"><span data-l="hi">सेवा, संकल्प और सुशासन के पथ पर — एक कार्यकर्ता जो जनता की आवाज़ को सत्ता के गलियारों तक पहुँचाता है।</span><span data-l="en">On the path of service, resolve and good governance — a worker who carries the public's voice into the corridors of power.</span></p>
         <div class="btns">
@@ -1076,7 +1099,7 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
     <div class="wrap">
       <div class="sec-head">
         <div class="orn"><i></i><svg viewBox="0 0 30 22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><path d="M15 19C12.2 15 12.2 9 15 3C17.8 9 17.8 15 15 19Z"/><path d="M14.3 19C9.8 17.4 7.2 13.4 6.7 8.8C10.7 10.6 13.4 14.3 14.3 19Z"/><path d="M15.7 19C20.2 17.4 22.8 13.4 23.3 8.8C19.3 10.6 16.6 14.3 15.7 19Z"/><path d="M5 20.5H25"/></svg><i></i></div>
-        <h2><span data-l="hi">फोटो गैलरी</span><span data-l="en">Photographs</span></h2>
+        <h2><span data-l="hi">ब्रजवासी फोटो गैलरी</span><span data-l="en">Brajwasi Photo Gallery</span></h2>
         <p><span data-l="hi">जनसेवा, सांस्कृतिक कार्यक्रम एवं जन संपर्क के क्षण।</span><span data-l="en">Moments from public service, cultural programmes and outreach.</span></p>
       </div>
       <div class="grid" id="grid"></div>
@@ -1388,6 +1411,8 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="फोटो / Photograph">
   <button type="button" id="lbx" aria-label="बंद करें / Close">&times;</button>
+  <button type="button" class="lb-nav lb-prev" id="lb-prev" aria-label="पिछली / Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button type="button" class="lb-nav lb-next" id="lb-next" aria-label="अगली / Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   <figure><img id="lbi" alt=""><figcaption id="lbc"></figcaption></figure>
 </div>
 
@@ -1454,6 +1479,41 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
     ["images/photos/p88.jpg","जनसेवा कार्यक्रम","Public service"]
   ];
   var grid = document.getElementById("grid");
+  var JANSAMPARK=[]; for(var ji=1;ji<=65;ji++){ JANSAMPARK.push("images/jansampark/j"+(ji<10?("0"+ji):ji)+".jpg"); }
+  var SENIOR=[]; for(var si2=1;si2<=130;si2++){ SENIOR.push("images/senior/s"+(si2<10?"00"+(si2):si2<100?"0"+si2:si2)+".jpg"); }
+  var SWAMI=[]; for(var wi=1;wi<=9;wi++){ SWAMI.push("images/swami/w"+(wi<10?"0"+wi:wi)+".jpg"); }
+  var ALL_SLIDES=[].concat(JANSAMPARK,SENIOR,SWAMI);
+  (function(){
+    var f=document.createElement("figure");
+    f.className="gal-slideshow";
+    f.setAttribute("role","button"); f.setAttribute("tabindex","0");
+    f.setAttribute("aria-label","जन संपर्क अभियान फ़ोटो / Photo gallery");
+    var img=document.createElement("img"); img.src=ALL_SLIDES[0]; img.alt="फ़ोटो गैलरी"; f.appendChild(img);
+    var badge=document.createElement("span"); badge.className="album-badge";
+    badge.innerHTML='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>'+ALL_SLIDES.length;
+    f.appendChild(badge);
+    var cap=document.createElement("figcaption");
+    cap.innerHTML='<span data-l="hi">जन संपर्क अभियान — क्लिक करें</span><span data-l="en">Public outreach — click to view</span>';
+    f.appendChild(cap); grid.appendChild(f);
+    var si=0;
+    var gTimer=null;
+    function gShow(i){ si=(i+ALL_SLIDES.length)%ALL_SLIDES.length; img.src=ALL_SLIDES[si]; }
+    function gReset(){ if(gTimer)clearInterval(gTimer); if(!reduce) gTimer=setInterval(function(){ gShow(si+1); },3000); }
+    gReset();
+    /* arrow buttons */
+    var prevBtn=document.createElement("button"); prevBtn.className="gal-arr prev"; prevBtn.setAttribute("aria-label","पिछली / Previous");
+    prevBtn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>';
+    var nextBtn=document.createElement("button"); nextBtn.className="gal-arr next"; nextBtn.setAttribute("aria-label","अगली / Next");
+    nextBtn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>';
+    f.appendChild(prevBtn); f.appendChild(nextBtn);
+    prevBtn.addEventListener("click",function(e){ e.stopPropagation(); gShow(si-1); gReset(); });
+    nextBtn.addEventListener("click",function(e){ e.stopPropagation(); gShow(si+1); gReset(); });
+    f.addEventListener("click",function(){ openAlbum(f); });
+    f.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openAlbum(f); }});
+    /* album slideshow bhi ALL_SLIDES use kare */
+    window._gallerySlides=ALL_SLIDES;
+  })();
+  PHOTOS.length=0;
   PHOTOS.forEach(function(p){
     var src = p[0];
     var f = document.createElement("figure");
@@ -1530,7 +1590,24 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
 
   /* ---------- lightbox ---------- */
   var lb = document.getElementById("lb"), lbi = document.getElementById("lbi"), lbc = document.getElementById("lbc");
-  var lastFocus = null;
+  var lastFocus = null, albumTimer=null, albumIdx=0;
+  function albumShow(i){
+    var pool=window._gallerySlides||JANSAMPARK;
+    albumIdx=(i+pool.length)%pool.length;
+    lbi.src=pool[albumIdx];
+    lbi.alt="फ़ोटो गैलरी";
+    lbc.textContent=(root.lang==="en"?"Gallery ":"गैलरी ")+(albumIdx+1)+" / "+pool.length;
+  }
+  function albumTick(){ albumTimer=setInterval(function(){ albumShow(albumIdx+1); },3000); }
+  function albumReset(){ if(albumTimer){ clearInterval(albumTimer); } albumTick(); }
+  function albumStop(){ if(albumTimer){ clearInterval(albumTimer); albumTimer=null; } lb.classList.remove("album"); }
+  function openAlbum(tile){
+    lastFocus=tile||document.querySelector(".tile.album");
+    lb.classList.add("open","album");
+    document.body.style.overflow="hidden";
+    albumShow(0); albumTick();
+    document.getElementById("lbx").focus();
+  }
   function openLb(tile){
     if(tile.classList.contains("no-img")) return;
     lastFocus = tile;
@@ -1545,20 +1622,31 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
   }
   function closeLb(){
     if(!lb.classList.contains("open")) return;
+    albumStop();
     lb.classList.remove("open"); lbi.removeAttribute("src");
     document.body.style.overflow = "";
     if(lastFocus){ lastFocus.focus(); }
   }
   grid.addEventListener("click", function(e){
-    var t = e.target.closest(".tile"); if(t){ openLb(t); }
+    var t = e.target.closest(".tile"); if(!t) return;
+    if(t.dataset.album){ openAlbum(t); } else { openLb(t); }
   });
   grid.addEventListener("keydown", function(e){
     if(e.key !== "Enter" && e.key !== " ") return;
-    var t = e.target.closest(".tile"); if(t){ e.preventDefault(); openLb(t); }
+    var t = e.target.closest(".tile"); if(!t) return; e.preventDefault();
+    if(t.dataset.album){ openAlbum(t); } else { openLb(t); }
   });
   document.getElementById("lbx").addEventListener("click", closeLb);
+  document.getElementById("lb-prev").addEventListener("click", function(){ if(lb.classList.contains("album")){ albumShow(albumIdx-1); albumReset(); } });
+  document.getElementById("lb-next").addEventListener("click", function(){ if(lb.classList.contains("album")){ albumShow(albumIdx+1); albumReset(); } });
+  lbi.addEventListener("click", function(){ if(lb.classList.contains("album")){ albumShow(albumIdx+1); albumReset(); } });
   lb.addEventListener("click", function(e){ if(e.target === lb){ closeLb(); } });
-  document.addEventListener("keydown", function(e){ if(e.key === "Escape"){ closeLb(); } });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){ closeLb(); return; }
+    if(!lb.classList.contains("album")) return;
+    if(e.key==="ArrowRight"){ albumShow(albumIdx+1); albumReset(); }
+    else if(e.key==="ArrowLeft"){ albumShow(albumIdx-1); albumReset(); }
+  });
 
   /* ---------- contact form ---------- */
   var form = document.getElementById("form"), note = document.getElementById("note");
