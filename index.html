@@ -20,11 +20,11 @@
 <style>
 /* ── tokens ─────────────────────────────────────────────── */
 :root{
-  --bg:#FFFFFF; --surface:#FFF8F2; --surface-2:#FFF0E0;
-  --text:#1A0E00; --text-2:#6B4C20; --text-3:#9A7A50;
-  --rule:#F0D4B0; --rule-soft:#FAE8D0;
-  --accent:#C44800; --accent-fill:#FF6600;
-  --deep:#C44000; --deep-2:#A03200; --deep-text:#FFFFFF; --deep-text-2:#FFD9B0; --deep-rule:#E06030; --sanjhi:#D45500; --art-ink:#8B3A00; --art-marigold:#FF8C00; --art-glow:#FFE8CC; --art-glow-line:#FFB870; --art-stone:#FFF4E8;
+  --bg:#FFFFFF; --surface:#FFF8F0; --surface-2:#FFE8CC;
+  --text:#2B1A0E; --text-2:#6B4A2B; --text-3:#9A7050;
+  --rule:#FFD9A8; --rule-soft:#FFE8CC;
+  --accent:#D35400; --accent-fill:#FF7A00;
+  --deep:#D35400; --deep-2:#B34700; --deep-text:#FFFFFF; --deep-text-2:#FFE8CC; --deep-rule:#E06030; --sanjhi:#FF7A00; --art-ink:#B34700; --art-marigold:#FF7A00; --art-glow:#FFE8CC; --art-glow-line:#FFD9A8; --art-stone:#FFF8F0;
   --font-d:'Tiro Devanagari Hindi',Georgia,'Times New Roman',serif;
   --font-b:'Mukta',system-ui,-apple-system,'Segoe UI',sans-serif;
   --arch:50% 50% 6px 6px / 44% 44% 6px 6px;
@@ -35,19 +35,19 @@
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#15110C; --surface:#1E1810; --surface-2:#251D14;
-    --text:#EFE4D2; --text-2:#B8A88F; --text-3:#94846E;
-    --rule:#463829; --rule-soft:#332819;
-    --accent:#E8A33F; --accent-fill:#E8A33F;
-    --deep:#0D2F31; --deep-2:#081F21; --deep-text:#EFE6D6; --deep-text-2:#A3BEBA; --deep-rule:#1F4A4C; --sanjhi:#3E9A93; --art-ink:#A3C7C1; --art-marigold:#F0B24A; --art-glow:#3B2B18; --art-glow-line:#6A4C27; --art-stone:#211A12;
+    --bg:#1A0A00; --surface:#2B1200; --surface-2:#3D1A00;
+    --text:#FFF0E0; --text-2:#FFD9A8; --text-3:#FFBF80;
+    --rule:#6B3A10; --rule-soft:#4A2500;
+    --accent:#FF9A40; --accent-fill:#FF7A00;
+    --deep:#B34700; --deep-2:#8B3400; --deep-text:#FFFFFF; --deep-text-2:#FFE8CC; --deep-rule:#D35400; --sanjhi:#FF7A00; --art-ink:#FFD9A8; --art-marigold:#FF9A40; --art-glow:#3D1A00; --art-glow-line:#6B3A10; --art-stone:#2B1200;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#15110C; --surface:#1E1810; --surface-2:#251D14;
-  --text:#EFE4D2; --text-2:#B8A88F; --text-3:#94846E;
-  --rule:#463829; --rule-soft:#332819;
-  --accent:#E8A33F; --accent-fill:#E8A33F;
-  --deep:#0D2F31; --deep-2:#081F21; --deep-text:#EFE6D6; --deep-text-2:#A3BEBA; --deep-rule:#1F4A4C; --sanjhi:#3E9A93; --art-ink:#A3C7C1; --art-marigold:#F0B24A; --art-glow:#3B2B18; --art-glow-line:#6A4C27; --art-stone:#211A12;
+    --bg:#1A0A00; --surface:#2B1200; --surface-2:#3D1A00;
+    --text:#FFF0E0; --text-2:#FFD9A8; --text-3:#FFBF80;
+    --rule:#6B3A10; --rule-soft:#4A2500;
+    --accent:#FF9A40; --accent-fill:#FF7A00;
+    --deep:#B34700; --deep-2:#8B3400; --deep-text:#FFFFFF; --deep-text-2:#FFE8CC; --deep-rule:#D35400; --sanjhi:#FF7A00; --art-ink:#FFD9A8; --art-marigold:#FF9A40; --art-glow:#3D1A00; --art-glow-line:#6B3A10; --art-stone:#2B1200;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(4.8rem + env(safe-area-inset-top,0px))}
