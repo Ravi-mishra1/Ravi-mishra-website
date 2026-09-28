@@ -745,30 +745,35 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
 <header class="hdr">
   <div class="hdr-in">
     <a class="brand" href="#top">
-      <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <!-- BJP Lotus -->
-        <!-- Center petal -->
-        <path d="M50 8 C44 18 40 30 41 44 C44 52 50 58 50 58 C50 58 56 52 59 44 C60 30 56 18 50 8Z" fill="#FF6600" stroke="#222" stroke-width="2"/>
-        <!-- Left inner petal -->
-        <path d="M32 18 C28 28 28 40 33 50 C38 56 46 58 46 58 C44 48 40 38 38 28 C36 24 34 20 32 18Z" fill="#FF6600" stroke="#222" stroke-width="2"/>
-        <!-- Right inner petal -->
-        <path d="M68 18 C72 28 72 40 67 50 C62 56 54 58 54 58 C56 48 60 38 62 28 C64 24 66 20 68 18Z" fill="#FF6600" stroke="#222" stroke-width="2"/>
-        <!-- Far left petal -->
-        <path d="M16 30 C14 40 16 52 24 60 C30 65 40 65 44 62 C38 56 30 50 26 42 C22 36 18 32 16 30Z" fill="#FF8C00" stroke="#222" stroke-width="2"/>
-        <!-- Far right petal -->
-        <path d="M84 30 C86 40 84 52 76 60 C70 65 60 65 56 62 C62 56 70 50 74 42 C78 36 82 32 84 30Z" fill="#FF8C00" stroke="#222" stroke-width="2"/>
-        <!-- Left leaf -->
-        <path d="M28 62 C22 60 16 65 18 72 C22 78 34 76 42 70 C38 68 32 66 28 62Z" fill="#2E7D32" stroke="#222" stroke-width="1.5"/>
-        <!-- Right leaf -->
-        <path d="M72 62 C78 60 84 65 82 72 C78 78 66 76 58 70 C62 68 68 66 72 62Z" fill="#2E7D32" stroke="#222" stroke-width="1.5"/>
-        <!-- Center leaf -->
-        <path d="M42 70 C44 76 50 80 50 80 C50 80 56 76 58 70 C54 68 50 66 46 68 Z" fill="#2E7D32" stroke="#222" stroke-width="1.5"/>
-        <!-- Stem -->
-        <path d="M50 80 L50 95" stroke="#222" stroke-width="3" stroke-linecap="round"/>
-        <!-- Roots -->
-        <path d="M38 95 C42 93 46 95 50 95 C54 95 58 93 62 95" stroke="#222" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-        <path d="M42 99 C45 97 50 99 50 99 C50 99 55 97 58 99" stroke="#222" stroke-width="2" stroke-linecap="round" fill="none"/>
-      </svg>
+      <svg viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <style>.p{fill:#FF6600;stroke:#111;stroke-width:5;stroke-linejoin:round}.l{fill:#2E8B2E;stroke:#111;stroke-width:4;stroke-linejoin:round}</style>
+  </defs>
+  <!-- Far left petal -->
+  <path class="p" d="M60 170 C30 140 20 100 35 65 C42 48 52 38 62 32 C58 55 60 80 72 105 C78 118 84 130 85 145Z"/>
+  <!-- Left petal -->
+  <path class="p" d="M80 165 C62 138 58 105 68 75 C74 55 84 40 95 28 C94 52 96 78 104 102 C109 118 114 132 112 148Z"/>
+  <!-- Center petal (tallest) -->
+  <path class="p" d="M100 170 C88 148 84 118 88 88 C92 62 100 40 100 15 C100 15 108 42 112 68 C116 96 114 128 100 170Z"/>
+  <!-- Right petal -->
+  <path class="p" d="M120 165 C138 138 142 105 132 75 C126 55 116 40 105 28 C106 52 104 78 96 102 C91 118 86 132 88 148Z"/>
+  <!-- Far right petal -->
+  <path class="p" d="M140 170 C170 140 180 100 165 65 C158 48 148 38 138 32 C142 55 140 80 128 105 C122 118 116 130 115 145Z"/>
+  <!-- Left leaf -->
+  <path class="l" d="M55 172 C35 165 20 175 28 188 C36 200 62 196 82 182 C74 178 64 176 55 172Z"/>
+  <!-- Center leaf -->
+  <path class="l" d="M85 178 C90 190 100 198 100 198 C100 198 110 190 115 178 C108 174 100 172 92 174Z"/>
+  <!-- Right leaf -->
+  <path class="l" d="M145 172 C165 165 180 175 172 188 C164 200 138 196 118 182 C126 178 136 176 145 172Z"/>
+  <!-- Stem -->
+  <path d="M100 198 C100 198 97 208 96 215 C95 220 96 224 100 225 C104 224 105 220 104 215 C103 208 100 198 100 198Z" fill="#111" stroke="#111" stroke-width="2"/>
+  <!-- Root left group -->
+  <rect x="72" y="221" width="16" height="4" rx="2" fill="#111"/>
+  <rect x="75" y="227" width="10" height="4" rx="2" fill="#111"/>
+  <!-- Root right group -->
+  <rect x="112" y="221" width="16" height="4" rx="2" fill="#111"/>
+  <rect x="115" y="227" width="10" height="4" rx="2" fill="#111"/>
+</svg>
       <b><span data-l="hi">रवि कांत मिश्रा</span><span data-l="en">Ravi Kant Mishra</span>
         <i><span data-l="hi">वृन्दावन, मथुरा</span><span data-l="en">Vrindavan, Mathura</span></i></b>
     </a>
