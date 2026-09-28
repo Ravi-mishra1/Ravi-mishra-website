@@ -363,6 +363,11 @@ footer > .sj-band{margin-bottom:2.2rem}
 .gal-slideshow img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .4s ease}
 .gal-slideshow figcaption{position:absolute;inset-inline:0;bottom:0;padding:1.8rem .9rem .7rem;background:linear-gradient(0deg,rgba(8,20,22,.72),transparent);color:#F5EDE0;font-size:.9rem}
 .gal-slideshow .album-badge{position:absolute;top:.8rem;inset-inline-end:.8rem}
+.gal-arr{position:absolute;top:50%;transform:translateY(-50%);width:2.6rem;height:2.6rem;display:grid;place-content:center;background:rgba(8,20,22,.55);border:1px solid rgba(245,237,224,.4);color:#F5EDE0;border-radius:50%;cursor:pointer;z-index:3;transition:background .18s}
+.gal-arr:hover{background:rgba(8,20,22,.82)}
+.gal-arr svg{width:18px;height:18px}
+.gal-arr.prev{inset-inline-start:.7rem}
+.gal-arr.next{inset-inline-end:.7rem}
 .tile.album-empty{background:var(--surface-2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;cursor:default;border:1px solid var(--rule-soft)}
 .tile.album-empty figcaption{position:static;background:none;color:var(--text-3);font-size:.92rem;text-align:center;padding:0}
 .alb-ph-ico svg{width:3rem;height:2.2rem;color:var(--text-3)}
@@ -1491,7 +1496,18 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
     cap.innerHTML='<span data-l="hi">जन संपर्क अभियान — क्लिक करें</span><span data-l="en">Public outreach — click to view</span>';
     f.appendChild(cap); grid.appendChild(f);
     var si=0;
-    if(!reduce){ setInterval(function(){ si=(si+1)%ALL_SLIDES.length; img.src=ALL_SLIDES[si]; },3000); }
+    var gTimer=null;
+    function gShow(i){ si=(i+ALL_SLIDES.length)%ALL_SLIDES.length; img.src=ALL_SLIDES[si]; }
+    function gReset(){ if(gTimer)clearInterval(gTimer); if(!reduce) gTimer=setInterval(function(){ gShow(si+1); },3000); }
+    gReset();
+    /* arrow buttons */
+    var prevBtn=document.createElement("button"); prevBtn.className="gal-arr prev"; prevBtn.setAttribute("aria-label","पिछली / Previous");
+    prevBtn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>';
+    var nextBtn=document.createElement("button"); nextBtn.className="gal-arr next"; nextBtn.setAttribute("aria-label","अगली / Next");
+    nextBtn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>';
+    f.appendChild(prevBtn); f.appendChild(nextBtn);
+    prevBtn.addEventListener("click",function(e){ e.stopPropagation(); gShow(si-1); gReset(); });
+    nextBtn.addEventListener("click",function(e){ e.stopPropagation(); gShow(si+1); gReset(); });
     f.addEventListener("click",function(){ openAlbum(f); });
     f.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openAlbum(f); }});
     /* album slideshow bhi ALL_SLIDES use kare */
