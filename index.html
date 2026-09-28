@@ -1572,6 +1572,7 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
                "मोबाइल / Mobile: " + v("ph") + "\n" +
                "ईमेल / Email: " + (v("em") || "—") + "\n" +
                "विषय / Subject: " + subject + "\n\n" + v("ms");
+    fetch("https://script.google.com/macros/s/AKfycbwYsb6DPzBp-tUuU41kBAPz-KFgIwu0QVQU-QBm2cRby2Zf0LB6AJ0kjyZsxpRZ2SGT/exec",{method:"POST",body:JSON.stringify({formType:"contact",name:v("nm"),phone:v("ph"),email:v("em"),message:v("ms")})}).catch(function(){});
     window.location.href = "mailto:ravi019971@gmail.com?subject=" +
       encodeURIComponent("[Website] " + subject + " — " + v("nm")) +
       "&body=" + encodeURIComponent(body);
@@ -1696,6 +1697,7 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
     var role=jf.querySelector("input[name=role]:checked"), roleTxt=role?role.nextElementSibling.querySelector('[data-l="hi"]').textContent:"";
     var v=function(id){return document.getElementById(id).value.trim();};
     var msg="जय श्री राधे! मैं टीम ब्रज सेवा से जुड़ना चाहता/चाहती हूँ।\nभूमिका: "+roleTxt+"\nनाम: "+v("jn")+"\nमोबाइल: "+v("jm")+(v("ja")?"\nमोहल्ला/वार्ड: "+v("ja"):"");
+    fetch("https://script.google.com/macros/s/AKfycbwYsb6DPzBp-tUuU41kBAPz-KFgIwu0QVQU-QBm2cRby2Zf0LB6AJ0kjyZsxpRZ2SGT/exec",{method:"POST",body:JSON.stringify({formType:"Help",name:v("hn"),mobile:v("hm"),area:v("hw"),problem:v("hmsg")})}).catch(function(){{}});
     window.open("https://wa.me/919810013921?text="+encodeURIComponent(msg),"_blank","noopener");
   });
   document.querySelectorAll('a[data-subject="mission"]').forEach(function(a){
@@ -1826,6 +1828,7 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
     var v=function(id){return document.getElementById(id).value.trim();}, g=document.getElementById("vg");
     var msg="जय श्री राधे! मैं टीम ब्रज सेवा में स्वयंसेवक बनना चाहता/चाहती हूँ।\nसेवा: "+sel.join(", ")+"\nनाम: "+v("vn")+"\nमोबाइल: "+v("vm")+
       (v("va")?"\nमोहल्ला/वार्ड: "+v("va"):"")+"\nआयु वर्ग: "+g.options[g.selectedIndex].getAttribute("data-hi")+(av.length?"\nसमय: "+av.join(", "):"")+(v("vs")?"\nकौशल: "+v("vs"):"");
+    fetch("https://script.google.com/macros/s/AKfycbwYsb6DPzBp-tUuU41kBAPz-KFgIwu0QVQU-QBm2cRby2Zf0LB6AJ0kjyZsxpRZ2SGT/exec",{method:"POST",body:JSON.stringify({formType:"volunteer",name:v("vn"),mobile:v("vm"),area:v("va"),availability:av.join(", "),skill:v("vs")})}).catch(function(){});
     window.open("https://wa.me/919810013921?text="+encodeURIComponent(msg),"_blank","noopener");
   });
 })();
@@ -1856,6 +1859,7 @@ button.btn{font-family:var(--font-b);font-size:.95rem;font-weight:600;cursor:poi
     var msg="जय श्री राधे! जन सहायता अनुरोध\nसंदर्भ: "+ref+"\nविषय: "+c.options[c.selectedIndex].getAttribute("data-hi")+"\nनाम: "+v("hn")+"\nमोबाइल: "+v("hm")+(v("hw")?"\nमोहल्ला/वार्ड: "+v("hw"):"")+"\nविवरण: "+v("hmsg");
     var ok=document.getElementById("hd-ok"); ok.hidden=false;
     ok.textContent=L()==="hi"?("आपका संदर्भ क्रमांक: "+ref+" — इसे सँभालकर रखें। व्हाट्सएप पर संदेश भेजें।"):("Your reference: "+ref+" — keep it safe. Send the message on WhatsApp.");
+    fetch("https://script.google.com/macros/s/AKfycbwYsb6DPzBp-tUuU41kBAPz-KFgIwu0QVQU-QBm2cRby2Zf0LB6AJ0kjyZsxpRZ2SGT/exec",{method:"POST",body:JSON.stringify({formType:"volunteer",name:v("vn"),mobile:v("vm"),area:v("va"),availability:av.join(", "),skill:v("vs")})}).catch(function(){});
     window.open("https://wa.me/919810013921?text="+encodeURIComponent(msg),"_blank","noopener");
   });
 })();
